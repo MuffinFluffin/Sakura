@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>en</string>
+        <string>ar</string>
+        <string>bn</string>
+        <string>cs</string>
+        <string>da</string>
+        <string>de</string>
+        <string>es</string>
+        <string>es-419</string>
+        <string>fi</string>
+        <string>fil</string>
+        <string>fr</string>
+        <string>he</string>
+        <string>hi</string>
+        <string>hu</string>
+        <string>id</string>
+        <string>it</string>
+        <string>ja</string>
+        <string>ko</string>
+        <string>ms</string>
+        <string>nb</string>
+        <string>nl</string>
+        <string>pl</string>
+        <string>pt-BR</string>
+        <string>pt-PT</string>
+        <string>ro</string>
+        <string>ru</string>
+        <string>sv</string>
+        <string>th</string>
+        <string>tr</string>
+        <string>uk</string>
+        <string>vi</string>
+        <string>zh-Hans</string>
+        <string>zh-Hant</string>
+    </array>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>Sakura</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleDisplayName</key>
+    <string>Sakura</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.games</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(MARKETING_VERSION)</string>
+    <key>CFBundleVersion</key>
+    <string>$(CURRENT_PROJECT_VERSION)</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <!-- App Store Connect export-compliance declaration. Sakura only uses
+         Apple-provided cryptography (TLS through NSURLSession for
+         achievements etc.), so mark the build as exempt to avoid the
+         "Missing Compliance" block on uploads. -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Sakura uses photo library access to save and change game cover art and app background</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Sakura uses photo library access to save and change game cover art and app background</string>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+    <!-- MetalHUDEnabled: Apple’s system Metal Performance HUD (Developer).
+         false = do not use Apple’s overlay here; Sakura’s Swift OSD is separate
+         and must never be mistaken for or fused with that HUD. -->
+    <key>MetalHUDEnabled</key>
+    <false/>
+    <!-- Allow display/CADisplayLink to use full ProMotion refresh (e.g. 120 Hz) during gameplay -->
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>arm64</string>
+    </array>
+    <!-- Landscape only (PS4-style shell + emulation) -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>UISupportsTrueScreenSizeOnMac</key>
+    <true/>
+    <key>UILaunchToFullScreenByDefaultOnMac</key>
+    <true/>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <true/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                </dict>
+            </array>
+            <key>UIWindowSceneSessionRoleExternalDisplayNonInteractive</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>External Display Configuration</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).ExternalSceneDelegate</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+    <!-- Dark solid launch handoff to SwiftUI splash: `SplashView`
+         shows the bundled cherry blossom video with the Sakura word mark.
+         No UIImageName — iOS launch screens cannot play video. -->
+    <key>UILaunchScreen</key>
+    <dict>
+        <key>UIColorName</key>
+        <string>LaunchBackgroundColor</string>
+    </dict>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleDefault</string>
+    <key>UIStatusBarHidden</key>
+    <true/>
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>discord</string>
+    </array>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeName</key>
+            <string>PlayStation Disc Image</string>
+            <key>CFBundleTypeRole</key>
+            <string>Viewer</string>
+            <key>LSHandlerRank</key>
+            <string>Alternate</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>public.iso-image</string>
+                <string>public.disk-image</string>
+                <string>public.data</string>
+            </array>
+            <key>CFBundleTypeExtensions</key>
+            <array>
+                <string>iso</string>
+                <string>bin</string>
+                <string>cue</string>
+                <string>cua</string>
+                <string>img</string>
+                <string>chd</string>
+                <string>pbp</string>
+                <string>m3u</string>
+                <string>toc</string>
+                <string>ccd</string>
+                <string>sub</string>
+                <string>mds</string>
+                <string>mdf</string>
+                <string>nrg</string>
+                <string>cdi</string>
+                <string>psx</string>
+                <string>ecm</string>
+                <string>cso</string>
+                <string>zso</string>
+                <string>gz</string>
+                <string>rom</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>

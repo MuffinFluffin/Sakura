@@ -1,0 +1,42 @@
+.DS_Store
+**/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+/DerivedData/
+
+/ios-development-team.local
+
+# local cmake/xcode build trees (regenerated)
+/src/cpp/build*/
+/build/
+/build-archive/
+
+# build/run logs
+*.log
+
+# local rule files
+*.mdc
+autonomy.md
+"autonomy copy.md"
+
+# transient planning notes (one-off, never shipped)
+*.plan.md
+
+# cross-project stale notes
+/documents/
+/PatchNotes/
+/docs/
+
+# vendored third party clones (built locally via scripts/build_beetle_psx_ios.sh)
+/third_party/
+
+# loose marketing/store icons (App Store icons live under src/assets/Assets.xcassets)
+/AppIcons-18/
+
+# downloaded neural model weights
+/tools/ps_realgan_export/weights/
+
+# vendor binaries: shipped pre-built for build convenience.
+# rebuild with scripts/build_beetle_psx_ios.sh when bumping the core.
+# (no glob ignore so the checked-in mednafen_psx_libretro_ios.dylib stays tracked.)
+/src/build/
